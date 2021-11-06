@@ -4,7 +4,6 @@ import React, {useState} from 'react'
 import WeatherForm from '../../components/WeatherForm';
 import Louder from '../../components/Louder';
 import InformationWeather from './InformationWeather'
-import MoreInformationWeather from './MoreInformationWeather';
 
 
 
