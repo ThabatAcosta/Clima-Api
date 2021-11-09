@@ -7,23 +7,27 @@ import Home from './views/Home/Home.jsx';
 import MoreInformationWeather from './views/Home/MoreInformationWeather';
 
 
+
 function App() {
   return (
-    <BrowserRouter>
+
+<div className="fondo w-full h-full flex flex-col">
+
+    <BrowserRouter >
      <Switch>
 
        <Route path="/" exact>
-       <Home  />
+       <Home />
        </Route>
 
        <Route path="/weather/:name" exact>
-         <MoreInformationWeather/>
+         <MoreInformationWeather />
        </Route>
 
      </Switch>
     </BrowserRouter>
 
-    
+</div>
   );
 }
 
