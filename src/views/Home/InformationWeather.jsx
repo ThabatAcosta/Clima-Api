@@ -1,14 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { IconWeather } from '../../components/IconWeather'
 
-const InformationWeather = ({cityInformation}) => {
+const InformationWeather = ({cityInformation, }) => {
 
-
-console.log('city :>> ', cityInformation);
 
     return (
          <div className= ' shadow-2xl rounded-lg border w-64 h-50 p-11 m-auto my-11 flex flex-col justify-center'>
             <div className="sm:w-2/3">
+
+                <IconWeather icon={cityInformation.weather[0].icon}
+                weatherDescription={cityInformation.weather[0].description}
+                />
 
                 <h1 className=' text-4xl text-red-400 font-bold mb-2 '> {cityInformation?.main?.temp}º</h1>
                    

@@ -6,7 +6,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 //Views (vistas o paginas)
 import Home from './views/Home/Home.jsx';
 import MoreInformationWeather from './views/Home/MoreInformationWeather';
-// import Error404 from './components/Error404';
+
 
 
 
@@ -28,10 +28,6 @@ function App() {
        <Route path="/weather/:name" exact>
          <MoreInformationWeather />
        </Route>
-
-       {/* <Route path="/*">
-         <Error404 />
-       </Route> */}
 
      </Switch>
     </BrowserRouter>

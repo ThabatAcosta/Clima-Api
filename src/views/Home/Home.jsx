@@ -16,7 +16,7 @@ const Home = () => {
      const [cityName, setCityName] = useState("");
      const [cityInformation, setCityInformation] = useState(null);
      const [loader, setLoader] = useState(false);
-    //  const [error404, setError404] = useState(false);
+    const [error404, setError404] = useState(false);
  
      //Funciones
      const handleCity = ({value}) => {  
@@ -39,40 +39,23 @@ const Home = () => {
          } catch (error) {
             setLoader(false);
             console.error(error)
-             
+            setError404(true)
          }
          setLoader(false);
             
-           
-          
-            
-            // if (result.hasOwnProperty('name')) {
-            //     setCityInformation(result); 
-            //     setLoader(false); 
-               
-            // }
-            // setLoader(false);
 
            return 
            
             
      };
 
-    //  useEffect(() => {
-    //     handleSearchWeather().then(result => {
-    //         if (result.hasOwnProperty('name')) {
-    //             setCityInformation(result); 
-    //             setLoader(false);   
-    //         }
-    //         throw new Error('el clima es malo');
-    //     }).catch(error => console.error(error));
-       
-    //     setLoader(false);
-    //  }, [cityInformation])
-
-
+  
     return (
-        <div >
+        <>
+         {
+         !error404 ?
+
+        <div>
            <Header/>
 
            <WeatherForm
@@ -91,12 +74,19 @@ const Home = () => {
                  />)  
            }
 
-           {/* {
-               error404 && <Error404/>
-           }  */}
-
         </div>
+
+        :
+          <Error404/>
+
+        }
+
+
+        </>
+        
+
+    
     )
 }
 
-export default Home
+export default Home;
