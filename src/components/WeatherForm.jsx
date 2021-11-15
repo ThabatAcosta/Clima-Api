@@ -10,7 +10,8 @@ const WeatherForm = ({handleCity, handleSearchWeather}) => {
             <input className=" p-1 w-11/12 md:w-2/5 border-4 outline-none  "
                    type="text" 
                    placeholder="City Name" 
-                   onChange={({target}) => handleCity(target)} />
+                   onChange={({target}) => handleCity(target)}
+                   required />
 
             <input className=" border-8"
                   type="submit" 
