@@ -29,28 +29,35 @@ const MoreInformationWeather = () => {
 
 
     return (
-        <div className=' w-screen h-screen flex justify-center items-center' style={{backgroundImage: `url(${nameWeather})`,  backgroundRepeat: 'no-repeat',
-        minHeight:'100vh',
-        backgroundSize: 'cover'  }}>
-            <section className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12'>
+        <div className='h-screen flex justify-center items-center bg-no-repeat bg-cover bg-center' style={{backgroundImage: `url(${nameWeather})`}}>
+            <section className=' w-11/12 md:w-1/2    bg-primary shadow-2xl p-6 rounded-lg border'>
                 
-                <div className=' grid grid-cols-1 gap-6 '>
-                    <div className=' border rounded-lg sahdow-lg p-10 flex flex-col justify-center'> 
-                    <IconWeather icon={state.weather[0].icon}
-                weatherDescription={state.weather[0].description}/>
-                      <h1 className='text-xl font-bold mb-2 '>{state?.name}  </h1>
-                      <h2 className=''>Pais: {state?.sys.country} </h2>
-                      <h2>Temperature {state?.main?.temp}º</h2>
-                      <h1 className='text-xl  font-bold mb-2'> {state?.weather[0].main}</h1>
-                       <h2>{state?.weather[0].description} </h2>
-                       <h2 > Humidity {state?.main?.humidity}</h2>
-                       
-                    </div>
+                <div className=' grid grid-cols-2  '>
+                    <div className=' flex flex-col justify-between space-y-4 ' >
+                <div className=' space-y-2'>
+                    <h1 className='text-4xl lg:text-6xl text-yellow-400 hover:text-blue-400 drop-shadow-2xl font-bold mb-2 '>{state?.name}  </h1>
+                      <h2 className='text-xl lg:text-2xl '>Pais: {state?.sys.country} </h2>
+                      <h1 className='text-xl  font-bold'> {state?.weather[0].main}</h1>
+                    <h2 className=' text-xs md:text-base'>Temperature {state?.main?.temp}º</h2>
+                    <h2 className=' text-xs md:text-base' > Humidity {state?.main?.humidity}</h2>
                 </div>
-                <div className='p-12'>
-                        <button className=' border-2 border-gray-100 rounded-lg px-3 py-2 text-red-400 cursor-pointer hover:bg-red-400 hover:text-black flex-col' onClick={handleClickGoBack}>Atras</button>
+                    
+                        <button type='button' className=' w-10/12 border border-gray-100 rounded-lg px-3 py-2 to-black bg-yellow-400 cursor-pointer hover:bg-blue-400  ' onClick={handleClickGoBack}>Atras</button>
+                    
+                        
                     </div>
+                    <div className=' flex flex-col items-center justify-start ' >
+                        <div className='w-10/12'> <IconWeather icon={state.weather[0].icon}
+                weatherDescription={state.weather[0].description}/></div>
+                   
+                     <h2 className='text-md lg:text-2xl capitalize  drop-shadow-2xl font-bold mb-2 ' >{state?.weather[0].description} </h2>
 
+                    </div>
+                
+                 
+                </div>
+               
+               
             </section>  
         </div>
     )

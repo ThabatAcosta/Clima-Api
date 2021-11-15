@@ -1,5 +1,5 @@
 import React, { useState} from 'react'
-
+import back from '../../style/cambio-sol-luna.gif'
 
 //components 
 import WeatherForm from '../../components/WeatherForm';
@@ -56,7 +56,7 @@ const Home = () => {
          {
          !error404 ?
 
-        <div>
+        <div  className='m-0 p-0 h-screen bg-center bg-cover bg-no-repeat' style={{backgroundImage: `url(${ back })` }}>
            <Header/>
 
            <WeatherForm

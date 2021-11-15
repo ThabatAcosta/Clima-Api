@@ -6,24 +6,28 @@ const InformationWeather = ({cityInformation, }) => {
 
 
     return (
-         <div className= ' shadow-2xl rounded-lg border w-64 h-50 p-11 m-auto my-11 flex flex-col justify-center'>
-            <div className="sm:w-2/3">
+         <div className= '   w-full    flex  justify-center items-center my-6'>
+            <div className=" w-8/12 md:w-5/12 lg:w-4/12 bg-primary shadow-2xl p-6 rounded-lg border  flex justify-between">
 
-                <IconWeather icon={cityInformation.weather[0].icon}
+           
+                <div className=' flex flex-col  space-y-3'>
+                <h1 className=' text-4xl lg:text-6xl text-yellow-400 hover:text-blue-400 drop-shadow-2xl font-bold  '> {cityInformation?.main?.temp}º</h1>
+                   
+                    <h2 className=' text-3xl lg:text-5xl font-extralight text-black  '>{cityInformation.name}</h2>
+                   </div>
+
+                    <div className=' w-2/5 flex flex-col justify-between  items-center  '> 
+                 <IconWeather icon={cityInformation.weather[0].icon}
                 weatherDescription={cityInformation.weather[0].description}
                 />
-
-                <h1 className=' text-4xl text-red-400 font-bold mb-2 '> {cityInformation?.main?.temp}º</h1>
-                   
-                    <h2 className='  md:text-lg mb-4'>{cityInformation.name}</h2>
-                    <Link
+                 <Link
                         to={{
                               pathname: `/weather/${cityInformation?.name}`,
                               state: cityInformation
                             }}
-                        className=' border border-gray-100 rounded-lg px-2 py-1 cursor-pointer hover:bg-red-400 hover:text-black'>
+                        className=' w-4/5 text-center bg-yellow-400 border border-gray-100 rounded-lg px-2 py-1 cursor-pointer hover:bg-blue-400 hover:text-black'>
                         Ver mas
-                    </Link>
+                    </Link></div>  
             </div>
         </div>      
 
