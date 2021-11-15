@@ -36,13 +36,13 @@ const MoreInformationWeather = () => {
                     <div className=' flex flex-col justify-between space-y-4 ' >
                 <div className=' space-y-2'>
                     <h1 className='text-4xl lg:text-6xl text-yellow-400 hover:text-blue-400 drop-shadow-2xl font-bold mb-2 '>{state?.name}  </h1>
-                      <h2 className='text-xl lg:text-2xl '>Pais: {state?.sys.country} </h2>
+                      <h2 className='text-xl lg:text-2xl '>Country: {state?.sys.country} </h2>
                       <h1 className='text-xl  font-bold'> {state?.weather[0].main}</h1>
                     <h2 className=' text-xs md:text-base'>Temperature {state?.main?.temp}º</h2>
                     <h2 className=' text-xs md:text-base' > Humidity {state?.main?.humidity}</h2>
                 </div>
                     
-                        <button type='button' className=' w-10/12 border border-gray-100 rounded-lg px-3 py-2 to-black bg-yellow-400 cursor-pointer hover:bg-blue-400  ' onClick={handleClickGoBack}>Atras</button>
+                        <button type='button' className=' w-10/12 border border-gray-100 rounded-lg px-3 py-2 to-black bg-yellow-400 cursor-pointer hover:bg-blue-400  ' onClick={handleClickGoBack}>Back</button>
                     
                         
                     </div>

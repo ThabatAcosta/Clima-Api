@@ -26,7 +26,7 @@ const InformationWeather = ({cityInformation, }) => {
                               state: cityInformation
                             }}
                         className=' w-4/5 text-center bg-yellow-400 border border-gray-100 rounded-lg px-2 py-1 cursor-pointer hover:bg-blue-400 hover:text-black'>
-                        Ver mas
+                        See More
                     </Link></div>  
             </div>
         </div>      
