@@ -30,8 +30,9 @@ const Home = () => {
         
          try { 
              
-            const API = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${process.env.REACT_APP_API_KEY}`;
-             const response = await fetch(API);
+            //const API = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${process.env.REACT_APP_API_KEY}`;
+            const API = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=02bdd03fc8c7013ae820c80e61a9d080`;
+            const response = await fetch(API);
              const result = await response.json();
              setCityInformation(result); 
 
